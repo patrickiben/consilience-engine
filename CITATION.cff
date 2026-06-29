@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "consilience-engine: a domain-agnostic multi-lens consilience engine for gene sets"
+message: "If you use this software, please cite it."
+type: software
+authors:
+  - family-names: Iben
+    given-names: Patrick
+version: 0.1.0
+date-released: 2026-06-29
+license: MIT
+keywords:
+  - bioinformatics
+  - data integration
+  - consilience
+  - gene sets
+  - multi-omics
+  - cell types
+repository-code: "https://github.com/USER/consilience-engine"

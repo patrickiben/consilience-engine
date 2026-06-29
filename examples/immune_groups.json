@@ -1,0 +1,170 @@
+{
+ "T-cell": [
+  "CD3D",
+  "CD3E",
+  "CD3G",
+  "CD4",
+  "CD8A",
+  "CD8B",
+  "LCK",
+  "ZAP70",
+  "IL7R",
+  "TCF7"
+ ],
+ "B-cell": [
+  "CD19",
+  "CD79A",
+  "CD79B",
+  "MS4A1",
+  "CD22",
+  "PAX5",
+  "EBF1",
+  "IGHM"
+ ],
+ "NK-cell": [
+  "NCAM1",
+  "KLRD1",
+  "KLRK1",
+  "NKG7",
+  "GNLY",
+  "NCR1",
+  "KLRF1"
+ ],
+ "Myeloid-macro": [
+  "CD14",
+  "CD68",
+  "CSF1R",
+  "ITGAM",
+  "LYZ",
+  "MRC1",
+  "CD163",
+  "FCGR3A"
+ ],
+ "Dendritic": [
+  "ITGAX",
+  "CLEC9A",
+  "FLT3",
+  "BATF3",
+  "IRF8",
+  "CD1C"
+ ],
+ "Neutrophil": [
+  "FCGR3B",
+  "CSF3R",
+  "ELANE",
+  "MPO",
+  "S100A8",
+  "S100A9"
+ ],
+ "TLR-family": [
+  "TLR1",
+  "TLR2",
+  "TLR3",
+  "TLR4",
+  "TLR5",
+  "TLR7",
+  "TLR8",
+  "TLR9"
+ ],
+ "CytokineR": [
+  "IL2RA",
+  "IL2RB",
+  "IL2RG",
+  "IL4R",
+  "IL6R",
+  "IL10RA",
+  "IFNAR1",
+  "IFNGR1"
+ ],
+ "ChemokineR": [
+  "CCR1",
+  "CCR2",
+  "CCR5",
+  "CCR7",
+  "CXCR3",
+  "CXCR4",
+  "CXCR5"
+ ],
+ "MHC-HLA": [
+  "HLA-A",
+  "HLA-B",
+  "HLA-C",
+  "HLA-DRA",
+  "HLA-DRB1",
+  "HLA-DQA1",
+  "B2M"
+ ],
+ "Complement": [
+  "C1QA",
+  "C1QB",
+  "C3",
+  "C5",
+  "CFB",
+  "CFH",
+  "C4BPA"
+ ],
+ "FcR-Ig": [
+  "FCGR1A",
+  "FCGR2A",
+  "FCGR2B",
+  "FCER1G",
+  "FCRL1"
+ ],
+ "Inflammasome": [
+  "NLRP3",
+  "AIM2",
+  "PYCARD",
+  "CASP1",
+  "IL1B",
+  "IL18",
+  "GSDMD"
+ ],
+ "JAK-STAT": [
+  "JAK1",
+  "JAK2",
+  "JAK3",
+  "TYK2",
+  "STAT1",
+  "STAT3",
+  "STAT5A",
+  "SOCS1",
+  "SOCS3"
+ ],
+ "TCR-signaling": [
+  "LAT",
+  "PLCG1",
+  "CD28",
+  "CTLA4",
+  "PDCD1",
+  "FYN",
+  "ITK"
+ ],
+ "Antigen-proc": [
+  "TAP1",
+  "TAP2",
+  "PSMB8",
+  "PSMB9",
+  "TAPBP",
+  "ERAP1",
+  "CALR"
+ ],
+ "IFN-response": [
+  "IRF3",
+  "IRF7",
+  "MX1",
+  "OAS1",
+  "ISG15",
+  "IFIT1",
+  "TMEM173",
+  "DDX58"
+ ],
+ "NFkB-signaling": [
+  "NFKB1",
+  "RELA",
+  "IKBKB",
+  "NFKBIA",
+  "TNFAIP3",
+  "MYD88",
+  "IRAK4"
+ ]
+}
