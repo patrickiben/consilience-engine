@@ -5,3 +5,7 @@ build/
 dist/
 .venv/
 *.json.cache
+
+# runtime outputs
+.consilience_cache/
+*_report.json

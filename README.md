@@ -44,16 +44,28 @@ report = engine.run(components, sims)
 print("orthogonality r =", engine.structure_expression_orthogonality(report))
 ```
 
-## Use (CLI)
+## Use (CLI) — config-driven, path-independent, cached
 
-```bash
-python -m consilience run examples/immune_groups.json \
-    --expression-field "RNA blood cell specific nTPM" --out immune_report.json
+A domain is one self-contained JSON config (components + the right expression field for the tissue):
+
+```json
+{ "name": "cardiac",
+  "expression_field": "RNA single cell type specific nCPM",
+  "components": { "Cardiomyocyte": ["TNNT2","MYL7", ...], "CardiacIonChannel": ["SCN5A", ...], ... } }
 ```
 
-Pick the HPA expression field for your tissue:
+```bash
+python -m consilience run examples/cardiac.json          # third domain, no code edits
+python -m consilience run examples/immune.json
+scripts/repro.sh                                          # one command, both example domains
+```
+
+Lens results are cached to `.consilience_cache/` (string-keyed JSON), so re-runs are **offline and
+reproducible** from a clean checkout. Pick the HPA expression field for your tissue:
 `RNA single nuclei brain specific nCPM` (brain) · `RNA blood cell specific nTPM` (immune) ·
-`RNA single cell type specific nTPM` (pan-tissue).
+`RNA single cell type specific nCPM` (pan-tissue: heart, kidney, etc.).
+
+Offline self-test: `python tests/test_engine.py`.
 
 ## What you get back
 

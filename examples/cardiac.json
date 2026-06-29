@@ -1,0 +1,18 @@
+{
+  "name": "cardiac",
+  "expression_field": "RNA single cell type specific nCPM",
+  "species": 9606,
+  "components": {
+    "Cardiomyocyte": ["TNNT2", "MYL7", "NPPA", "NPPB", "MYH6", "ACTC1", "MYL2"],
+    "Endothelial": ["PECAM1", "CDH5", "VWF", "KDR", "TEK", "CLDN5"],
+    "Fibroblast": ["COL1A1", "COL3A1", "DDR2", "POSTN", "PDGFRA", "LUM"],
+    "SmoothMuscle": ["ACTA2", "MYH11", "TAGLN", "CNN1", "MYOCD"],
+    "Pacemaker-conduction": ["HCN4", "SHOX2", "TBX3", "ISL1", "TBX5"],
+    "CardiacIonChannel": ["SCN5A", "CACNA1C", "KCNQ1", "KCNH2", "KCNJ2", "KCND3", "CACNA1G"],
+    "AdrenergicCholinergicR": ["ADRB1", "ADRB2", "ADRA1A", "CHRM2", "ADORA1"],
+    "Connexin": ["GJA1", "GJC1", "GJD3", "GJA5"],
+    "Sarcomere": ["MYBPC3", "TPM1", "TNNI3", "ACTN2", "TTN", "MYOM1", "NEXN", "LDB3"],
+    "CalciumHandling": ["RYR2", "ATP2A2", "PLN", "CASQ2", "SLC8A1", "CAMK2D"],
+    "Desmosome": ["DSP", "PKP2", "DSG2", "DSC2", "JUP"]
+  }
+}
