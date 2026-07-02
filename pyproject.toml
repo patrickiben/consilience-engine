@@ -14,7 +14,7 @@ keywords = ["bioinformatics", "data integration", "consilience", "gene sets", "m
 dependencies = ["numpy", "scipy", "scikit-learn", "networkx"]
 
 [project.urls]
-Homepage = "https://github.com/USER/consilience"
+Homepage = "https://github.com/patrickiben/consilience-engine"
 
 [project.scripts]
 consilience = "consilience.cli:main"
