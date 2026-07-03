@@ -120,7 +120,7 @@ def expression_sim(symbols, ids=None, hpa_field="RNA single nuclei brain specifi
     Pick the field that matches your tissue, e.g.:
       - 'RNA single nuclei brain specific nCPM'  (brain cell types)
       - 'RNA blood cell specific nTPM'           (immune cell types)
-      - 'RNA single cell type specific nTPM'     (pan-tissue)
+      - 'RNA single cell type specific nCPM'     (pan-tissue)
     """
     import numpy as np
     ids = ids or resolve_ids(symbols)

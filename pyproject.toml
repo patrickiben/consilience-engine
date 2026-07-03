@@ -13,6 +13,9 @@ authors = [{ name = "Patrick Iben" }]
 keywords = ["bioinformatics", "data integration", "consilience", "gene sets", "multi-omics"]
 dependencies = ["numpy", "scipy", "scikit-learn", "networkx"]
 
+[project.optional-dependencies]
+test = ["pytest"]
+
 [project.urls]
 Homepage = "https://github.com/patrickiben/consilience-engine"
 

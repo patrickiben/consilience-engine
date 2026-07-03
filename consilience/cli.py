@@ -52,6 +52,12 @@ def main(argv=None):
     r.add_argument("--out", default=None)
     a = ap.parse_args(argv)
 
+    # A non-absolute --cache-dir is resolved relative to the config file's directory,
+    # so reproduction is path-independent (running from any cwd still finds the cache).
+    cache_dir = a.cache_dir
+    if not os.path.isabs(cache_dir):
+        cache_dir = os.path.join(os.path.dirname(os.path.abspath(a.config)), cache_dir)
+
     cfg = json.load(open(a.config))
     if "components" in cfg:                       # full config object
         components = cfg["components"]
@@ -62,11 +68,11 @@ def main(argv=None):
         name = os.path.splitext(os.path.basename(a.config))[0]
         field = a.expression_field or DEFAULT_FIELD
 
-    os.makedirs(a.cache_dir, exist_ok=True)
+    os.makedirs(cache_dir, exist_ok=True)
     genes = sorted({g for v in components.values() for g in v})
     want = [x.strip() for x in a.lenses.split(",") if x.strip()]
     ids = lenses.resolve_ids(genes) if "expression" in want else {}
-    sims = {L: _lens_cached(L, genes, ids, field, a.cache_dir, name) for L in want}
+    sims = {L: _lens_cached(L, genes, ids, field, cache_dir, name) for L in want}
 
     report = engine.run(components, sims, null_draws=a.null_draws)
     report["structure_expression_orthogonality"] = engine.structure_expression_orthogonality(report)
@@ -79,7 +85,7 @@ def main(argv=None):
     print(f"{'component':24}{'class':30}{'best lens':12}")
     for c, d in report["components"].items():
         print(f"{c:24}{d['class']:30}{str(d['best']):12}")
-    print(f"\nwrote {out}  (cache: {a.cache_dir}/)")
+    print(f"\nwrote {out}  (cache: {cache_dir}/)")
 
 
 if __name__ == "__main__":

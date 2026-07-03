@@ -1,4 +1,5 @@
 """Offline unit test: separation, classification, and orthogonality behave as designed (no network)."""
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import itertools
 from consilience import engine
 
