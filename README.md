@@ -1,6 +1,7 @@
 # consilience-engine
 
 [![reproduce](https://github.com/patrickiben/consilience-engine/actions/workflows/repro.yml/badge.svg)](https://github.com/patrickiben/consilience-engine/actions/workflows/repro.yml)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/patrickiben/consilience-engine/main)
 
 A keyless, **domain-agnostic** multi-lens consilience engine for any gene set. Give it a set of named
 components (gene groups); it pulls several public data modalities — **structure** (InterPro domains),

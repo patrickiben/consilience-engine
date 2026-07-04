@@ -12,9 +12,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install -e .
+          pip install -e ".[test]"
       - name: Offline unit test
         run: python tests/test_engine.py
+      - name: Property-based + metamorphic tests
+        run: pytest tests/ -q
+      - name: Independent symbolic re-derivation
+        run: python scripts/verify_symbolic.py
       - name: Reproduce example domains (offline, from shipped caches)
         run: bash scripts/repro.sh
       - name: Assert reproduced numbers match committed

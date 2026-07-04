@@ -14,7 +14,7 @@ keywords = ["bioinformatics", "data integration", "consilience", "gene sets", "m
 dependencies = ["numpy", "scipy", "scikit-learn", "networkx"]
 
 [project.optional-dependencies]
-test = ["pytest"]
+test = ["pytest", "hypothesis", "sympy"]
 
 [project.urls]
 Homepage = "https://github.com/patrickiben/consilience-engine"
