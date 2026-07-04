@@ -42,8 +42,18 @@ def test_extra_lens_does_not_move_orthogonality():
     assert r1 == r1 and abs(r1 - r2) < 1e-9   # defined, and unmoved by an extra lens
 
 
+def test_missing_pair_equals_explicit_zero():
+    # the missing-pairs = 0 convention: an absent pair must behave exactly like an explicit 0
+    genes = ["a", "b", "c"]
+    full = _sim({("a", "b"): 0.8, ("a", "c"): 0.0, ("b", "c"): 0.0})
+    sparse = _sim({("a", "b"): 0.8})  # a-c and b-c ABSENT
+    assert abs(engine.separation(full, ["a", "b"], genes)
+               - engine.separation(sparse, ["a", "b"], genes)) < 1e-12
+
+
 if __name__ == "__main__":
     test_adding_noise_gene_does_not_increase_separation()
     test_gene_relabeling_invariant()
     test_extra_lens_does_not_move_orthogonality()
+    test_missing_pair_equals_explicit_zero()
     print("OK: metamorphic relations hold")

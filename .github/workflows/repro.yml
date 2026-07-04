@@ -13,12 +13,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -e ".[test]"
+      - name: Absolute-path guard
+        run: bash tools/check_paths.sh .
       - name: Offline unit test
         run: python tests/test_engine.py
       - name: Property-based + metamorphic tests
-        run: pytest tests/ -q
+        run: PYTHONPATH=. pytest tests/ -q
+      - name: Teeth check (suite is non-vacuous)
+        run: PYTHONPATH=. python scripts/teeth_check.py
       - name: Independent symbolic re-derivation
-        run: python scripts/verify_symbolic.py
+        run: PYTHONPATH=. python scripts/verify_symbolic.py
       - name: Reproduce example domains (offline, from shipped caches)
         run: bash scripts/repro.sh
       - name: Assert reproduced numbers match committed
