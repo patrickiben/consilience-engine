@@ -29,7 +29,7 @@ detector. No single lens sees everything — which is why integrating them (cons
 pip install -e .          # from this directory
 ```
 
-Requires Python ≥3.9; deps: numpy, scipy, scikit-learn, networkx. All data sources are keyless/public.
+Requires Python ≥3.11; deps: numpy, scipy, scikit-learn, networkx. All data sources are keyless/public.
 
 ## Use (library)
 
