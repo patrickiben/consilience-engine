@@ -1,0 +1,21 @@
+name: reproduce
+on: [push, pull_request]
+jobs:
+  repro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install (pinned)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+      - name: Offline unit test
+        run: python tests/test_engine.py
+      - name: Reproduce example domains (offline, from shipped caches)
+        run: bash scripts/repro.sh
+      - name: Assert reproduced numbers match committed
+        run: python scripts/check_reports.py

@@ -1,5 +1,7 @@
 # consilience-engine
 
+[![reproduce](https://github.com/patrickiben/consilience-engine/actions/workflows/repro.yml/badge.svg)](https://github.com/patrickiben/consilience-engine/actions/workflows/repro.yml)
+
 A keyless, **domain-agnostic** multi-lens consilience engine for any gene set. Give it a set of named
 components (gene groups); it pulls several public data modalities — **structure** (InterPro domains),
 **expression** (Human Protein Atlas cell-type RNA), **interaction** (STRING), **process** (GO-BP) — builds a
