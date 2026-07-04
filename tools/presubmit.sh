@@ -10,6 +10,7 @@ run "independent symbolic re-derivation"     bash -c "cd '$ROOT' && PYTHONPATH=.
 run "offline reproduction + numeric gate"    bash -c "cd '$ROOT' && PYTHON='$PY' bash scripts/repro.sh >/dev/null && PYTHONPATH=. '$PY' scripts/check_reports.py"
 if [ -n "$MS" ]; then
   run "citation integrity gate"          "$PY" "$ROOT/tools/check_citations.py" "$MS" --mailto patrickiben@gmail.com
+  run "citation metadata + completeness"  "$PY" "$ROOT/tools/check_citation_metadata.py" "$MS"
   run "AI-artifact / hidden-text scrub"  "$PY" "$ROOT/tools/scrub_ai_artifacts.py" "$MS"
 fi
 echo; if [ "$fail" -eq 0 ]; then echo "RESULT: ALL CLEAR"; else echo "RESULT: ISSUES (above)"; fi
