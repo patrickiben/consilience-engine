@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# One-command offline reproduction (engine + robustness). No network required.
+# This is the Code Ocean capsule entrypoint and a local convenience; override the
+# interpreter with PYTHON=... (e.g. PYTHON=python3.12 bash run).
+set -euo pipefail
+PY="${PYTHON:-python}"
+cd "$(dirname "$0")"
+export PYTHONPATH=.
+
+echo "== absolute-path guard =="                    ; bash tools/check_paths.sh .
+echo "== engine unit test =="                        ; "$PY" tests/test_engine.py
+echo "== property + metamorphic tests =="            ; "$PY" -m pytest tests/ -q
+echo "== teeth check (suite is non-vacuous) =="      ; "$PY" scripts/teeth_check.py
+echo "== independent symbolic re-derivation =="      ; "$PY" scripts/verify_symbolic.py
+echo "== reproduce example domains (offline) =="     ; PYTHON="$PY" bash scripts/repro.sh
+echo "== assert reproduced numbers (tolerance) =="   ; "$PY" scripts/check_reports.py
+echo "== method-invariance multiverse (false-floor) ==" ; "$PY" robustness/method_invariance.py
+
+echo
+echo "ALL REPRODUCED OK"

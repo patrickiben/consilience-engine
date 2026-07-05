@@ -1,0 +1,302 @@
+{
+ "groups": {
+  "T-cell": [
+   "CD3D",
+   "CD3E",
+   "CD3G",
+   "CD4",
+   "CD8A",
+   "CD8B",
+   "LCK",
+   "ZAP70",
+   "IL7R",
+   "TCF7"
+  ],
+  "B-cell": [
+   "CD19",
+   "CD79A",
+   "CD79B",
+   "MS4A1",
+   "CD22",
+   "PAX5",
+   "EBF1",
+   "IGHM"
+  ],
+  "NK-cell": [
+   "NCAM1",
+   "KLRD1",
+   "KLRK1",
+   "NKG7",
+   "GNLY",
+   "NCR1",
+   "KLRF1"
+  ],
+  "Myeloid-macro": [
+   "CD14",
+   "CD68",
+   "CSF1R",
+   "ITGAM",
+   "LYZ",
+   "MRC1",
+   "CD163",
+   "FCGR3A"
+  ],
+  "Dendritic": [
+   "ITGAX",
+   "CLEC9A",
+   "FLT3",
+   "BATF3",
+   "IRF8",
+   "CD1C"
+  ],
+  "Neutrophil": [
+   "FCGR3B",
+   "CSF3R",
+   "ELANE",
+   "MPO",
+   "S100A8",
+   "S100A9"
+  ],
+  "TLR-family": [
+   "TLR1",
+   "TLR2",
+   "TLR3",
+   "TLR4",
+   "TLR5",
+   "TLR7",
+   "TLR8",
+   "TLR9"
+  ],
+  "CytokineR": [
+   "IL2RA",
+   "IL2RB",
+   "IL2RG",
+   "IL4R",
+   "IL6R",
+   "IL10RA",
+   "IFNAR1",
+   "IFNGR1"
+  ],
+  "ChemokineR": [
+   "CCR1",
+   "CCR2",
+   "CCR5",
+   "CCR7",
+   "CXCR3",
+   "CXCR4",
+   "CXCR5"
+  ],
+  "MHC-HLA": [
+   "HLA-A",
+   "HLA-B",
+   "HLA-C",
+   "HLA-DRA",
+   "HLA-DRB1",
+   "HLA-DQA1",
+   "B2M"
+  ],
+  "Complement": [
+   "C1QA",
+   "C1QB",
+   "C3",
+   "C5",
+   "CFB",
+   "CFH",
+   "C4BPA"
+  ],
+  "FcR-Ig": [
+   "FCGR1A",
+   "FCGR2A",
+   "FCGR2B",
+   "FCER1G",
+   "FCRL1"
+  ],
+  "Inflammasome": [
+   "NLRP3",
+   "AIM2",
+   "PYCARD",
+   "CASP1",
+   "IL1B",
+   "IL18",
+   "GSDMD"
+  ],
+  "JAK-STAT": [
+   "JAK1",
+   "JAK2",
+   "JAK3",
+   "TYK2",
+   "STAT1",
+   "STAT3",
+   "STAT5A",
+   "SOCS1",
+   "SOCS3"
+  ],
+  "TCR-signaling": [
+   "LAT",
+   "PLCG1",
+   "CD28",
+   "CTLA4",
+   "PDCD1",
+   "FYN",
+   "ITK"
+  ],
+  "Antigen-proc": [
+   "TAP1",
+   "TAP2",
+   "PSMB8",
+   "PSMB9",
+   "TAPBP",
+   "ERAP1",
+   "CALR"
+  ],
+  "IFN-response": [
+   "IRF3",
+   "IRF7",
+   "MX1",
+   "OAS1",
+   "ISG15",
+   "IFIT1",
+   "TMEM173",
+   "DDX58"
+  ],
+  "NFkB-signaling": [
+   "NFKB1",
+   "RELA",
+   "IKBKB",
+   "NFKBIA",
+   "TNFAIP3",
+   "MYD88",
+   "IRAK4"
+  ]
+ },
+ "seps": {
+  "T-cell": {
+   "STRING": 0.5602469034608379,
+   "GO-BP": 0.10257675481503269,
+   "InterPro": 0.09530264011352477,
+   "blood-expr": 0.6064729093569379
+  },
+  "B-cell": {
+   "STRING": 0.4880532834101383,
+   "GO-BP": 0.0720954992087604,
+   "InterPro": 0.1189951188279411,
+   "blood-expr": 0.9570863805165457
+  },
+  "NK-cell": {
+   "STRING": 0.5720632380952381,
+   "GO-BP": 0.013669318215363808,
+   "InterPro": 0.07939348929567644,
+   "blood-expr": 0.4425735252765883
+  },
+  "Myeloid-macro": {
+   "STRING": 0.3478241647465437,
+   "GO-BP": -0.005923686616340466,
+   "InterPro": -0.021556516344383148,
+   "blood-expr": 0.22198908657368038
+  },
+  "Dendritic": {
+   "STRING": 0.4559910052910052,
+   "GO-BP": 0.008518038033660517,
+   "InterPro": -0.02257078276766139,
+   "blood-expr": 0.2093309405515743
+  },
+  "Neutrophil": {
+   "STRING": 0.3879169312169312,
+   "GO-BP": 0.044131705136556794,
+   "InterPro": 0.04744518342713876,
+   "blood-expr": 0.33993796519576186
+  },
+  "TLR-family": {
+   "STRING": 0.537221198156682,
+   "GO-BP": 0.19001197696808364,
+   "InterPro": 0.7946927980014099,
+   "blood-expr": 0.18618820279825177
+  },
+  "CytokineR": {
+   "STRING": 0.45395348502304145,
+   "GO-BP": 0.08401311778619204,
+   "InterPro": 0.2730837950373046,
+   "blood-expr": -0.04073325587587979
+  },
+  "ChemokineR": {
+   "STRING": 0.6438270476190477,
+   "GO-BP": 0.17461428976958182,
+   "InterPro": 0.5929705215419501,
+   "blood-expr": -0.037902627862838226
+  },
+  "MHC-HLA": {
+   "STRING": 0.7346617142857144,
+   "GO-BP": 0.15525966554375714,
+   "InterPro": 0.5102350561206613,
+   "blood-expr": -0.038271032271716035
+  },
+  "Complement": {
+   "STRING": 0.5725935238095239,
+   "GO-BP": 0.08363436872456954,
+   "InterPro": 0.11194113388723487,
+   "blood-expr": 0.06051612238147013
+  },
+  "FcR-Ig": {
+   "STRING": 0.4705614173228345,
+   "GO-BP": 0.1298009217778492,
+   "InterPro": 0.47476640483770227,
+   "blood-expr": -0.0036515575798962557
+  },
+  "Inflammasome": {
+   "STRING": 0.7543763809523807,
+   "GO-BP": 0.07783271226464378,
+   "InterPro": 0.055926708463780554,
+   "blood-expr": -0.020420912270532006
+  },
+  "JAK-STAT": {
+   "STRING": 0.7016747967479675,
+   "GO-BP": 0.08615170392785877,
+   "InterPro": 0.2532113117698866,
+   "blood-expr": 0.005253101210102435
+  },
+  "TCR-signaling": {
+   "STRING": 0.3905862857142858,
+   "GO-BP": 0.04400953451336456,
+   "InterPro": 0.06872065233076657,
+   "blood-expr": 0.22141682222950668
+  },
+  "Antigen-proc": {
+   "STRING": 0.6783577142857143,
+   "GO-BP": 0.08733728044150585,
+   "InterPro": 0.07641921905637075,
+   "blood-expr": -0.008553590279665941
+  },
+  "IFN-response": {
+   "STRING": 0.5541617223502304,
+   "GO-BP": 0.05489979810185177,
+   "InterPro": 0.03448719803997006,
+   "blood-expr": -0.0018434140675209418
+  },
+  "NFkB-signaling": {
+   "STRING": 0.6340777142857142,
+   "GO-BP": 0.07525356346432999,
+   "InterPro": 0.039613756188023624,
+   "blood-expr": 0.0
+  }
+ },
+ "kind": {
+  "T-cell": "cell",
+  "B-cell": "cell",
+  "NK-cell": "cell",
+  "Myeloid-macro": "cell",
+  "Dendritic": "cell",
+  "Neutrophil": "cell",
+  "TLR-family": "family",
+  "CytokineR": "family",
+  "ChemokineR": "family",
+  "MHC-HLA": "family",
+  "Complement": "family",
+  "FcR-Ig": "family",
+  "Inflammasome": "module",
+  "JAK-STAT": "module",
+  "TCR-signaling": "module",
+  "Antigen-proc": "module",
+  "IFN-response": "module",
+  "NFkB-signaling": "module"
+ }
+}

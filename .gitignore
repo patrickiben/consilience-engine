@@ -8,3 +8,4 @@ dist/
 
 # runtime outputs
 *_report.json
+robustness/method_invariance.json

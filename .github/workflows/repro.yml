@@ -31,3 +31,5 @@ jobs:
         run: bash scripts/repro.sh
       - name: Assert reproduced numbers match committed (tolerance, never bit-exact)
         run: python scripts/check_reports.py
+      - name: Method-invariance multiverse (false-floor robustness; asserts recovery holds)
+        run: PYTHONPATH=. python robustness/method_invariance.py

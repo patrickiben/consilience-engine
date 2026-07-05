@@ -1,0 +1,590 @@
+{
+ "Glu-mGluR": {
+  "n": 8,
+  "best": "InterPro",
+  "sep": 0.782,
+  "seps": {
+   "STRING": 0.615,
+   "GO-BP": 0.254,
+   "InterPro": 0.782,
+   "snRNA": 0.027
+  },
+  "cov": 0.75
+ },
+ "Glu-iGluR": {
+  "n": 16,
+  "best": "InterPro",
+  "sep": 0.92,
+  "seps": {
+   "STRING": 0.626,
+   "GO-BP": 0.272,
+   "InterPro": 0.92,
+   "snRNA": 0.009
+  },
+  "cov": 0.44
+ },
+ "Glu-transport": {
+  "n": 7,
+  "best": "STRING",
+  "sep": 0.471,
+  "seps": {
+   "STRING": 0.471,
+   "GO-BP": 0.224,
+   "InterPro": 0.427,
+   "snRNA": 0.004
+  },
+  "cov": 0.71
+ },
+ "Scaffold": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.711,
+  "seps": {
+   "STRING": 0.711,
+   "GO-BP": 0.076,
+   "InterPro": 0.263,
+   "snRNA": 0.019
+  },
+  "cov": 0.5
+ },
+ "GABA": {
+  "n": 4,
+  "best": "STRING",
+  "sep": 0.649,
+  "seps": {
+   "STRING": 0.649,
+   "GO-BP": 0.195,
+   "InterPro": 0.219,
+   "snRNA": 0.093
+  },
+  "cov": 0.5
+ },
+ "Reward-DA": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.61,
+  "seps": {
+   "STRING": 0.61,
+   "GO-BP": 0.054,
+   "InterPro": 0.184,
+   "snRNA": 0.192
+  },
+  "cov": 0.88
+ },
+ "HPA": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.621,
+  "seps": {
+   "STRING": 0.621,
+   "GO-BP": 0.026,
+   "InterPro": 0.052,
+   "snRNA": -0.027
+  },
+  "cov": 0.62
+ },
+ "ANS": {
+  "n": 11,
+  "best": "STRING",
+  "sep": 0.219,
+  "seps": {
+   "STRING": 0.219,
+   "GO-BP": 0.045,
+   "InterPro": 0.158,
+   "snRNA": -0.019
+  },
+  "cov": 0.55
+ },
+ "Endocannabinoid": {
+  "n": 3,
+  "best": "STRING",
+  "sep": 0.867,
+  "seps": {
+   "STRING": 0.867,
+   "GO-BP": 0.068,
+   "InterPro": -0.017,
+   "snRNA": -0.013
+  },
+  "cov": 0.33
+ },
+ "Serotonin": {
+  "n": 12,
+  "best": "STRING",
+  "sep": 0.44,
+  "seps": {
+   "STRING": 0.44,
+   "GO-BP": 0.048,
+   "InterPro": 0.119,
+   "snRNA": 0.073
+  },
+  "cov": 1.0
+ },
+ "Cholinergic-core": {
+  "n": 5,
+  "best": "STRING",
+  "sep": 0.653,
+  "seps": {
+   "STRING": 0.653,
+   "GO-BP": 0.057,
+   "InterPro": 0.098,
+   "snRNA": 0.044
+  },
+  "cov": 0.6
+ },
+ "Histamine": {
+  "n": 5,
+  "best": "STRING",
+  "sep": 0.599,
+  "seps": {
+   "STRING": 0.599,
+   "GO-BP": 0.182,
+   "InterPro": 0.253,
+   "snRNA": -0.021
+  },
+  "cov": 0.6
+ },
+ "Purinergic": {
+  "n": 6,
+  "best": "STRING",
+  "sep": 0.271,
+  "seps": {
+   "STRING": 0.271,
+   "GO-BP": 0.058,
+   "InterPro": 0.246,
+   "snRNA": 0.006
+  },
+  "cov": 0.67
+ },
+ "Opioid-peptide": {
+  "n": 7,
+  "best": "STRING",
+  "sep": 0.401,
+  "seps": {
+   "STRING": 0.401,
+   "GO-BP": 0.118,
+   "InterPro": 0.192,
+   "snRNA": 0.108
+  },
+  "cov": 0.71
+ },
+ "Glycine": {
+  "n": 5,
+  "best": "STRING",
+  "sep": 0.374,
+  "seps": {
+   "STRING": 0.374,
+   "GO-BP": 0.161,
+   "InterPro": 0.249,
+   "snRNA": -0.026
+  },
+  "cov": 0.6
+ },
+ "Astrocyte": {
+  "n": 5,
+  "best": "snRNA",
+  "sep": 0.532,
+  "seps": {
+   "STRING": 0.324,
+   "GO-BP": 0.001,
+   "InterPro": -0.003,
+   "snRNA": 0.532
+  },
+  "cov": 1.0
+ },
+ "Oligodendrocyte": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.786,
+  "seps": {
+   "STRING": 0.786,
+   "GO-BP": 0.058,
+   "InterPro": 0.03,
+   "snRNA": 0.57
+  },
+  "cov": 0.88
+ },
+ "Microglia": {
+  "n": 7,
+  "best": "snRNA",
+  "sep": 0.901,
+  "seps": {
+   "STRING": 0.728,
+   "GO-BP": 0.015,
+   "InterPro": 0.004,
+   "snRNA": 0.901
+  },
+  "cov": 1.0
+ },
+ "VoltageChannel": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.445,
+  "seps": {
+   "STRING": 0.445,
+   "GO-BP": 0.169,
+   "InterPro": 0.18,
+   "snRNA": -0.009
+  },
+  "cov": 0.22
+ },
+ "SynapticVesicle": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.812,
+  "seps": {
+   "STRING": 0.812,
+   "GO-BP": 0.067,
+   "InterPro": 0.011,
+   "snRNA": -0.004
+  },
+  "cov": 0.25
+ },
+ "Neurotrophin": {
+  "n": 7,
+  "best": "STRING",
+  "sep": 0.809,
+  "seps": {
+   "STRING": 0.809,
+   "GO-BP": 0.095,
+   "InterPro": 0.121,
+   "snRNA": 0.049
+  },
+  "cov": 0.86
+ },
+ "Enteric-NS": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.308,
+  "seps": {
+   "STRING": 0.308,
+   "GO-BP": 0.016,
+   "InterPro": 0.005,
+   "snRNA": 0.007
+  },
+  "cov": 0.89
+ },
+ "Nociception": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.579,
+  "seps": {
+   "STRING": 0.579,
+   "GO-BP": 0.056,
+   "InterPro": 0.09,
+   "snRNA": -0.006
+  },
+  "cov": 0.67
+ },
+ "Vision-photo": {
+  "n": 12,
+  "best": "STRING",
+  "sep": 0.632,
+  "seps": {
+   "STRING": 0.632,
+   "GO-BP": 0.171,
+   "InterPro": 0.096,
+   "snRNA": -0.012
+  },
+  "cov": 0.33
+ },
+ "Olfaction": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.429,
+  "seps": {
+   "STRING": 0.429,
+   "GO-BP": 0.065,
+   "InterPro": 0.067,
+   "snRNA": -0.015
+  },
+  "cov": 0.38
+ },
+ "Neuropeptide": {
+  "n": 14,
+  "best": "STRING",
+  "sep": 0.361,
+  "seps": {
+   "STRING": 0.361,
+   "GO-BP": 0.07,
+   "InterPro": 0.082,
+   "snRNA": 0.057
+  },
+  "cov": 0.71
+ },
+ "Axon-guidance": {
+  "n": 13,
+  "best": "STRING",
+  "sep": 0.483,
+  "seps": {
+   "STRING": 0.483,
+   "GO-BP": 0.039,
+   "InterPro": 0.088,
+   "snRNA": 0.023
+  },
+  "cov": 0.69
+ },
+ "Gap-junction": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.702,
+  "seps": {
+   "STRING": 0.702,
+   "GO-BP": 0.232,
+   "InterPro": 0.43,
+   "snRNA": 0.017
+  },
+  "cov": 0.75
+ },
+ "Neuroimmune": {
+  "n": 11,
+  "best": "STRING",
+  "sep": 0.444,
+  "seps": {
+   "STRING": 0.444,
+   "GO-BP": 0.043,
+   "InterPro": 0.076,
+   "snRNA": 0.4
+  },
+  "cov": 0.82
+ },
+ "Plasticity-core": {
+  "n": 10,
+  "best": "STRING",
+  "sep": 0.356,
+  "seps": {
+   "STRING": 0.356,
+   "GO-BP": 0.021,
+   "InterPro": 0.215,
+   "snRNA": 0.005
+  },
+  "cov": 0.3
+ },
+ "Neurodegeneration": {
+  "n": 10,
+  "best": "STRING",
+  "sep": 0.726,
+  "seps": {
+   "STRING": 0.726,
+   "GO-BP": 0.018,
+   "InterPro": 0.013,
+   "snRNA": -0.009
+  },
+  "cov": 0.2
+ },
+ "TransSynaptic-adhesion": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.5,
+  "seps": {
+   "STRING": 0.5,
+   "GO-BP": 0.056,
+   "InterPro": 0.076,
+   "snRNA": 0.017
+  },
+  "cov": 0.33
+ },
+ "IEG-transcription": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.509,
+  "seps": {
+   "STRING": 0.509,
+   "GO-BP": 0.049,
+   "InterPro": 0.129,
+   "snRNA": 0.086
+  },
+  "cov": 0.78
+ },
+ "Mitochondrial": {
+  "n": 10,
+  "best": "STRING",
+  "sep": 0.494,
+  "seps": {
+   "STRING": 0.494,
+   "GO-BP": 0.018,
+   "InterPro": 0.01,
+   "snRNA": -0.004
+  },
+  "cov": 0.1
+ },
+ "BBB-endothelium": {
+  "n": 8,
+  "best": "snRNA",
+  "sep": 0.821,
+  "seps": {
+   "STRING": 0.356,
+   "GO-BP": 0.028,
+   "InterPro": 0.01,
+   "snRNA": 0.821
+  },
+  "cov": 1.0
+ },
+ "Pericyte-mural": {
+  "n": 8,
+  "best": "snRNA",
+  "sep": 0.524,
+  "seps": {
+   "STRING": 0.249,
+   "GO-BP": 0.008,
+   "InterPro": -0.002,
+   "snRNA": 0.524
+  },
+  "cov": 1.0
+ },
+ "OPC": {
+  "n": 6,
+  "best": "snRNA",
+  "sep": 0.465,
+  "seps": {
+   "STRING": 0.152,
+   "GO-BP": 0.003,
+   "InterPro": -0.0,
+   "snRNA": 0.465
+  },
+  "cov": 1.0
+ },
+ "Cerebellar-neuron": {
+  "n": 8,
+  "best": "snRNA",
+  "sep": 0.09,
+  "seps": {
+   "STRING": 0.086,
+   "GO-BP": 0.001,
+   "InterPro": -0.004,
+   "snRNA": 0.09
+  },
+  "cov": 1.0
+ },
+ "SpinalMotor-neuron": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.182,
+  "seps": {
+   "STRING": 0.182,
+   "GO-BP": 0.023,
+   "InterPro": 0.101,
+   "snRNA": -0.007
+  },
+  "cov": 0.75
+ },
+ "Circadian": {
+  "n": 10,
+  "best": "STRING",
+  "sep": 0.721,
+  "seps": {
+   "STRING": 0.721,
+   "GO-BP": 0.076,
+   "InterPro": 0.137,
+   "snRNA": -0.004
+  },
+  "cov": 0.1
+ },
+ "Gasotransmitter": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.418,
+  "seps": {
+   "STRING": 0.418,
+   "GO-BP": 0.019,
+   "InterPro": 0.026,
+   "snRNA": 0.043
+  },
+  "cov": 0.89
+ },
+ "Neurosteroid": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.677,
+  "seps": {
+   "STRING": 0.677,
+   "GO-BP": 0.064,
+   "InterPro": 0.079,
+   "snRNA": 0.002
+  },
+  "cov": 0.5
+ },
+ "TraceAmine-TAAR": {
+  "n": 6,
+  "best": "InterPro",
+  "sep": 0.888,
+  "seps": {
+   "STRING": 0.533,
+   "GO-BP": 0.393,
+   "InterPro": 0.888,
+   "snRNA": 0.0
+  },
+  "cov": 0.0
+ },
+ "JAKSTAT-cytokine": {
+  "n": 10,
+  "best": "STRING",
+  "sep": 0.74,
+  "seps": {
+   "STRING": 0.74,
+   "GO-BP": 0.056,
+   "InterPro": 0.043,
+   "snRNA": 0.028
+  },
+  "cov": 0.5
+ },
+ "ChoroidPlexus-ependyma": {
+  "n": 8,
+  "best": "snRNA",
+  "sep": 0.607,
+  "seps": {
+   "STRING": 0.073,
+   "GO-BP": 0.003,
+   "InterPro": -0.0,
+   "snRNA": 0.607
+  },
+  "cov": 1.0
+ },
+ "NeuralStem-radialglia": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.468,
+  "seps": {
+   "STRING": 0.468,
+   "GO-BP": 0.056,
+   "InterPro": 0.056,
+   "snRNA": 0.16
+  },
+  "cov": 0.88
+ },
+ "Morphogen-patterning": {
+  "n": 9,
+  "best": "STRING",
+  "sep": 0.325,
+  "seps": {
+   "STRING": 0.325,
+   "GO-BP": 0.068,
+   "InterPro": 0.011,
+   "snRNA": 0.104
+  },
+  "cov": 0.89
+ },
+ "Schwann-periphglia": {
+  "n": 7,
+  "best": "snRNA",
+  "sep": 0.149,
+  "seps": {
+   "STRING": 0.146,
+   "GO-BP": 0.025,
+   "InterPro": -0.004,
+   "snRNA": 0.149
+  },
+  "cov": 0.86
+ },
+ "mTOR-epilepsy": {
+  "n": 8,
+  "best": "STRING",
+  "sep": 0.271,
+  "seps": {
+   "STRING": 0.271,
+   "GO-BP": 0.025,
+   "InterPro": -0.003,
+   "snRNA": -0.009
+  },
+  "cov": 0.25
+ }
+}

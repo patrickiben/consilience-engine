@@ -70,6 +70,22 @@ reproducible** from a clean checkout. Pick the HPA expression field for your tis
 
 Offline self-test: `python tests/test_engine.py`.
 
+## Reproduce in a container (Docker / Code Ocean)
+
+Everything reproduces offline from shipped caches and inputs, with no network at run time:
+
+```bash
+docker build -t consilience .
+docker run --rm consilience        # runs ./run
+```
+
+`run` is the one-command reproduction and the Code Ocean capsule entrypoint (see
+[CODE_OCEAN.md](CODE_OCEAN.md)): absolute-path guard, unit + property + metamorphic tests, teeth
+check, symbolic re-derivation, offline domain reproduction, the numeric gate, and a
+**method-invariance multiverse** (`robustness/method_invariance.py`) that re-checks the unsupervised
+class-recovery across four clustering algorithms and fails if the recovery stops holding. The same
+steps run in the CI matrix on Python 3.11, 3.12, and 3.13.
+
 ## What you get back
 
 For every component: per-lens **separation** (within- vs between-component similarity), a **permutation-null
