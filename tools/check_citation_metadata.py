@@ -40,7 +40,9 @@ def datacite_meta(doi):
         return {"year":str(a.get("publicationYear") or ""),"volume":"","first_page":"","src":"DataCite"}
     except Exception: return None
 
-md=open(sys.argv[1] if len(sys.argv)>1 else "/Users/patrickiben/Documents/Neuro_Atlas/PREPRINT.md",encoding="utf-8").read()
+if len(sys.argv)<2:
+    raise SystemExit("usage: check_citation_metadata.py <manuscript.md>")
+md=open(sys.argv[1],encoding="utf-8").read()
 refblock=md.split("## References",1)[1] if "## References" in md else md
 refs=re.findall(r"^(\d+)\.\s+(.*)$", refblock, re.M)
 
