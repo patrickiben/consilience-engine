@@ -4,9 +4,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/patrickiben/consilience-engine/main)
 
 A keyless, **domain-agnostic** multi-lens consilience engine for any gene set. Give it a set of named
-components (gene groups); it pulls several public data modalities — **structure** (InterPro domains),
-**expression** (Human Protein Atlas cell-type RNA), **interaction** (STRING), **process** (GO-BP) — builds a
-gene–gene similarity graph per modality, and quantifies *which data modality is required to recognise each
+components (gene groups); it pulls several public data modalities: **structure** (InterPro domains),
+**expression** (Human Protein Atlas cell-type RNA), **interaction** (STRING), and **process** (GO-BP). It builds
+a gene–gene similarity graph per modality, and quantifies *which data modality is required to recognise each
 component*.
 
 ## The principle it operationalises
@@ -21,7 +21,7 @@ Across the nervous and immune systems, biological entity-classes have **non-over
 
 …and **structure and expression are orthogonal** (a component is a *kind of molecule* or a *kind of cell*,
 rarely both): r = −0.29 (nervous system), r = −0.27 (immune system). Interaction is a near-universal
-detector. No single lens sees everything — which is why integrating them (consilience) is necessary.
+detector. No single lens sees everything, which is why integrating them (consilience) is necessary.
 
 ## Install
 
@@ -47,7 +47,7 @@ report = engine.run(components, sims)
 print("orthogonality r =", engine.structure_expression_orthogonality(report))
 ```
 
-## Use (CLI) — config-driven, path-independent, cached
+## Use (CLI): config-driven, path-independent, cached
 
 A domain is one self-contained JSON config (components + the right expression field for the tissue):
 
@@ -103,4 +103,4 @@ more lenses (genetics, pathways, proteomics), tests, and a Zenodo-deposited benc
 - STRING aggregates text-mining, so it is a near-universal detector but partly reflects co-citation.
 - Component definitions are user-supplied; the engine uses them only as labels, never to build similarities.
 - The expression lens is tissue-specific (a brain field is blind to peripheral systems; pick the right one).
-- Separation z rises with group size — compare raw separation across components, not z alone.
+- Separation z rises with group size, so compare raw separation across components, not z alone.

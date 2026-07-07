@@ -1,4 +1,4 @@
-"""Command-line interface — fully config-driven, path-independent, with a local cache.
+"""Command-line interface: fully config-driven, path-independent, with a local cache.
 
     python -m consilience run examples/cardiac.json [--cache-dir DIR] [--lenses ...] [--out FILE]
 
@@ -25,13 +25,14 @@ def _load_sim(path):
     return {tuple(k.split("|")): v for k, v in json.load(open(path)).items()}
 
 
-def _lens_cached(lens, genes, ids, field, cache_dir, name):
+def _lens_cached(lens, genes, field, cache_dir, name):
     fp = os.path.join(cache_dir, f"{name}__{lens}.json")
     if os.path.exists(fp):
         print(f"[lens] {lens}: cache hit", file=sys.stderr)
         return _load_sim(fp)
     print(f"[lens] {lens}: fetching ...", file=sys.stderr)
     if lens == "expression":
+        ids = lenses.resolve_ids(genes)   # resolve gene ids only on a cache miss, so a fully cached run stays offline
         sim, _ = lenses.expression_sim(genes, ids, hpa_field=field)
     else:
         sim = lenses.LENSES[lens](genes)
@@ -71,8 +72,7 @@ def main(argv=None):
     os.makedirs(cache_dir, exist_ok=True)
     genes = sorted({g for v in components.values() for g in v})
     want = [x.strip() for x in a.lenses.split(",") if x.strip()]
-    ids = lenses.resolve_ids(genes) if "expression" in want else {}
-    sims = {L: _lens_cached(L, genes, ids, field, cache_dir, name) for L in want}
+    sims = {L: _lens_cached(L, genes, field, cache_dir, name) for L in want}
 
     report = engine.run(components, sims, null_draws=a.null_draws)
     report["structure_expression_orthogonality"] = engine.structure_expression_orthogonality(report)

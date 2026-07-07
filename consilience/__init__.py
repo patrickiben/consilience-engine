@@ -1,4 +1,4 @@
-"""consilience — a keyless, domain-agnostic multi-lens consilience engine for any gene set.
+"""consilience: a keyless, domain-agnostic multi-lens consilience engine for any gene set.
 
 Quickstart
 ----------
