@@ -12,3 +12,4 @@ robustness/method_invariance.json
 
 # never vendor the data deposit into the code repo
 consilience_deposit/
+*.zip
