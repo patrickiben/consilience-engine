@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "consilience-engine"
-version = "0.1.0"
+version = "1.0.0"
 description = "Keyless, domain-agnostic multi-lens consilience engine: which data modality reveals which class of biological entity."
 readme = "README.md"
 requires-python = ">=3.11"

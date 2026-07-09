@@ -94,9 +94,10 @@ Plus the cross-lens **consilience matrix** and the **structure⊥expression** or
 
 ## Status
 
-v0.1 scaffold (engine + four lenses + CLI). Built from a 410-gene/49-component nervous-system map and a
-132-gene/18-component immune replication (see the companion preprint / `LENS_MAP`). Roadmap: caching layer,
-more lenses (genetics, pathways, proteomics), tests, and a Zenodo-deposited benchmark.
+v1.0.0 (engine + four lenses + config-driven CLI). Included: an offline caching layer, unit + property +
+metamorphic tests under continuous integration, and a deposited literature-based-discovery benchmark. Built
+from a 410-gene/49-component nervous-system map and a 132-gene/18-component immune replication (see the
+companion preprint / `LENS_MAP`). Possible future work: more lenses (genetics, pathways, proteomics).
 
 ## Caveats (honest)
 

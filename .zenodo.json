@@ -4,7 +4,7 @@
   "description": "A keyless, reproducible engine that, for any set of gene groups, pulls multiple public data modalities (InterPro structure, Human Protein Atlas cell-type expression, STRING interaction, GO-BP process), builds a gene-gene similarity graph per modality, and quantifies which modality is required to recognise each component. Operationalises the lens-map principle: cell types are revealed by expression, molecular families by structure, functional modules by interaction; structure and expression are orthogonal. Validated across the nervous and immune systems.",
   "creators": [{ "name": "Iben, Patrick" }],
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": ["bioinformatics","data integration","consilience","gene sets","multi-omics","cell types","molecular families"],
   "access_right": "open"
 }
