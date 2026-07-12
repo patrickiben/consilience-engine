@@ -16,7 +16,7 @@ Then edit `pyproject.toml`, `README.md`, `CITATION.cff` to replace `USER` with y
 ## 2. Mint a software DOI (Zenodo ↔ GitHub)
 
 1. Log in to https://zenodo.org with GitHub, enable the `consilience-engine` repo under **Settings → GitHub**.
-2. On GitHub, **create a Release** (tag `v0.1.0`). Zenodo auto-archives it and mints a DOI.
+2. On GitHub, **create a Release** (tag `v1.0.0`). Zenodo auto-archives it and mints a DOI.
 3. `.zenodo.json` (already in the repo) supplies the metadata. Add the DOI badge to `README.md`.
 
 ## 3. Deposit the data resource (separate DOI)
@@ -24,7 +24,7 @@ Then edit `pyproject.toml`, `README.md`, `CITATION.cff` to replace `USER` with y
 Bundle the atlases + per-lens similarities + figures as a citable dataset:
 
 ```bash
-mkdir -p ~/Documents/consilience_data && cd ~/Documents/_neuro_atlas_build
+mkdir -p ~/Documents/consilience_data && cd ~/Documents/consilience_data
 cp expanded_atlas4.json lens_map.json immune_lens_map.json consilience_matrix.json \
    matched_density.json multispecies_connectome.json lbd_roc.json \
    domain_exp4_*.json immune_ids.json expand*_ids.json ~/Documents/consilience_data/
