@@ -11,7 +11,7 @@ component*.
 
 ## The principle it operationalises
 
-Across the nervous and immune systems, biological entity-classes have **non-overlapping diagnostic lenses**:
+Across the nervous and immune systems, biological entity-classes have **distinct specialized diagnostic lenses**:
 
 | entity class | revealed by | example |
 |---|---|---|
@@ -19,7 +19,7 @@ Across the nervous and immune systems, biological entity-classes have **non-over
 | **molecular family** | structure | iGluR, TLRs, MHC, connexins |
 | **functional / disease module** | interaction | inflammasome, synaptic-vesicle release |
 
-…and **structure and expression are orthogonal** (a component is a *kind of molecule* or a *kind of cell*,
+…and **structure and expression tend to be mutually exclusive** (a weak negative tendency, r ≈ −0.29, explaining <10% of variance, not statistical orthogonality; a component is usually a *kind of molecule* or a *kind of cell*,
 rarely both): r = −0.29 (nervous system), r = −0.27 (immune system). Interaction is a near-universal
 detector. No single lens sees everything, which is why integrating them (consilience) is necessary.
 
@@ -44,7 +44,7 @@ sims = {"interaction": lenses.interaction_sim(genes),
         "process":     lenses.process_sim(genes)}
 sims["expression"], _ = lenses.expression_sim(genes, ids, hpa_field="RNA blood cell specific nTPM")
 report = engine.run(components, sims)
-print("orthogonality r =", engine.structure_expression_orthogonality(report))
+print("structure-expression r =", engine.structure_expression_orthogonality(report))
 ```
 
 ## Use (CLI): config-driven, path-independent, cached
@@ -90,7 +90,7 @@ steps run in the CI matrix on Python 3.11, 3.12, and 3.13.
 
 For every component: per-lens **separation** (within- vs between-component similarity), a **permutation-null
 z and p**, the **best lens**, and an entity-class **label** (cell-type / molecular-family / functional-module).
-Plus the cross-lens **consilience matrix** and the **structure⊥expression** orthogonality.
+Plus the cross-lens **consilience matrix** and the weak **structure–expression** anti-correlation (r ≈ −0.29, not orthogonality).
 
 ## Status
 

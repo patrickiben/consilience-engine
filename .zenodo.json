@@ -1,7 +1,7 @@
 {
   "title": "consilience-engine: a domain-agnostic multi-lens consilience engine for gene sets",
   "upload_type": "software",
-  "description": "A keyless, reproducible engine that, for any set of gene groups, pulls multiple public data modalities (InterPro structure, Human Protein Atlas cell-type expression, STRING interaction, GO-BP process), builds a gene-gene similarity graph per modality, and quantifies which modality is required to recognise each component. Operationalises the lens-map principle: cell types are revealed by expression, molecular families by structure, functional modules by interaction; structure and expression are orthogonal. Validated across the nervous and immune systems.",
+  "description": "A keyless, reproducible engine that, for any set of gene groups, pulls multiple public data modalities (InterPro structure, Human Protein Atlas cell-type expression, STRING interaction, GO-BP process), builds a gene-gene similarity graph per modality, and quantifies which modality most specifically recognises each component. Operationalises the lens-map principle: cell types are revealed by expression, molecular families by structure, functional modules by interaction; structure and expression tend to be mutually exclusive (a weak negative tendency, not orthogonality). Demonstrated across the nervous and immune systems.",
   "creators": [{ "name": "Iben, Patrick" }],
   "license": "MIT",
   "version": "1.0.0",

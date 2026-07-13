@@ -49,7 +49,7 @@ def main(argv=None):
     r.add_argument("--expression-field", default=None,
                    help="HPA field for the expression lens (overrides config)")
     r.add_argument("--cache-dir", default=".consilience_cache")
-    r.add_argument("--null-draws", type=int, default=1000)
+    r.add_argument("--null-draws", type=int, default=2000)
     r.add_argument("--out", default=None)
     a = ap.parse_args(argv)
 
