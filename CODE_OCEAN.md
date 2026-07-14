@@ -1,6 +1,6 @@
 # Reproducing on Code Ocean (or plain Docker)
 
-GigaScience encourages a Code Ocean compute capsule alongside the source. This repository is
+A Code Ocean compute capsule can accompany the source. This repository is
 capsule-ready: it ships a `Dockerfile` (the environment) and a single `run` entrypoint that
 reproduces every headline offline, with no network access, from the shipped caches
 (`examples/.consilience_cache/`) and the shipped robustness inputs (`robustness/data/`).
