@@ -7,36 +7,79 @@ The config JSON bundles the whole domain:
      "species": 9606, "components": {"GroupName": ["GENE1", ...], ...}}
 A bare {"GroupName": [...]} dict is also accepted (uses --expression-field / defaults).
 
-Lens similarities are cached to <cache-dir>/<name>__<lens>.json (string keys "A|B"), so a second
-run is offline and reproducible, and the headline numbers regenerate from a clean checkout.
+Lens caches include input fingerprints. Deposited <name>__<lens>.json snapshots remain immutable;
+custom/refresh runs use <name>__<lens>__<fingerprint>.json with source-contract metadata.
 """
 from __future__ import annotations
-import argparse, json, os, sys
+import argparse, hashlib, json, os, sys
+from datetime import datetime, timezone
 from . import lenses, engine
 
 DEFAULT_FIELD = "RNA single nuclei brain specific nCPM"
+CACHE_SCHEMA = 1
+# API/implementation contracts, not claims about the release date of live source data.
+PROVIDERS = {
+    "interaction": "STRING network API; human 9606; combined score",
+    "structure": "UniProt REST reviewed human gene_exact; InterPro Jaccard",
+    "process": "mygene v3 human symbol; GO-BP Jaccard",
+    "expression": "Human Protein Atlas gene JSON; log1p cosine; mygene v3 IDs",
+}
 
 
-def _save_sim(path, sim):
-    json.dump({f"{a}|{b}": v for (a, b), v in sim.items()}, open(path, "w"))
+def _cache_inputs(lens, genes, field, species=9606):
+    if species != 9606:
+        raise ValueError("The implemented providers support human genes only (species=9606).")
+    if lens not in PROVIDERS:
+        raise ValueError(f"Unknown lens: {lens!r}")
+    return {"schema_version": CACHE_SCHEMA, "lens": lens, "genes": sorted(set(genes)),
+            "expression_field": field if lens == "expression" else None,
+            "species": species, "provider_contract": PROVIDERS[lens],
+            "implementation_version": 1}
 
 
-def _load_sim(path):
-    return {tuple(k.split("|")): v for k, v in json.load(open(path)).items()}
+def _fingerprint(inputs):
+    return hashlib.sha256(json.dumps(inputs, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
 
-def _lens_cached(lens, genes, field, cache_dir, name):
-    fp = os.path.join(cache_dir, f"{name}__{lens}.json")
-    if os.path.exists(fp):
-        print(f"[lens] {lens}: cache hit", file=sys.stderr)
-        return _load_sim(fp)
+def _save_sim(path, sim, inputs, provenance=None):
+    payload = {"inputs": inputs, "fingerprint": _fingerprint(inputs),
+               "similarities": {f"{a}|{b}": v for (a, b), v in sim.items()},
+               "provenance": provenance or {"kind": "live-fetch", "provider_data_version": None,
+                                             "fetched_at": datetime.now(timezone.utc).isoformat()}}
+    with open(path, "w") as stream:
+        json.dump(payload, stream, separators=(",", ":"))
+
+
+def _load_sim(path, inputs):
+    with open(path) as stream:
+        payload = json.load(stream)
+    # Old unlabelled caches are unsafe: we cannot infer their genes or tissue.
+    if payload.get("inputs") != inputs or payload.get("fingerprint") != _fingerprint(inputs):
+        return None
+    return {tuple(k.split("|")): v for k, v in payload["similarities"].items()}
+
+
+def _lens_cached(lens, genes, field, cache_dir, name, refresh=False, species=9606):
+    inputs = _cache_inputs(lens, genes, field, species)
+    # Shipped example snapshots are immutable. Overrides/new fetches get a fingerprinted
+    # filename and can never overwrite those historical reproduction inputs.
+    name = os.path.basename(name)
+    snapshot = os.path.join(cache_dir, f"{name}__{lens}.json")
+    fp = os.path.join(cache_dir, f"{name}__{lens}__{_fingerprint(inputs)}.json")
+    if not refresh:
+        for candidate in (snapshot, fp):
+            if os.path.exists(candidate):
+                sim = _load_sim(candidate, inputs)
+                if sim is not None:
+                    print(f"[lens] {lens}: cache hit", file=sys.stderr)
+                    return sim
     print(f"[lens] {lens}: fetching ...", file=sys.stderr)
     if lens == "expression":
         ids = lenses.resolve_ids(genes)   # resolve gene ids only on a cache miss, so a fully cached run stays offline
         sim, _ = lenses.expression_sim(genes, ids, hpa_field=field)
     else:
         sim = lenses.LENSES[lens](genes)
-    _save_sim(fp, sim)
+    _save_sim(fp, sim, inputs)
     return sim
 
 
@@ -49,6 +92,7 @@ def main(argv=None):
     r.add_argument("--expression-field", default=None,
                    help="HPA field for the expression lens (overrides config)")
     r.add_argument("--cache-dir", default=".consilience_cache")
+    r.add_argument("--refresh", action="store_true", help="fetch current data into a new cache; preserve shipped snapshots")
     r.add_argument("--null-draws", type=int, default=2000)
     r.add_argument("--out", default=None)
     a = ap.parse_args(argv)
@@ -72,7 +116,8 @@ def main(argv=None):
     os.makedirs(cache_dir, exist_ok=True)
     genes = sorted({g for v in components.values() for g in v})
     want = [x.strip() for x in a.lenses.split(",") if x.strip()]
-    sims = {L: _lens_cached(L, genes, field, cache_dir, name) for L in want}
+    sims = {L: _lens_cached(L, genes, field, cache_dir, name, refresh=a.refresh,
+                           species=cfg.get("species", 9606) if "components" in cfg else 9606) for L in want}
 
     report = engine.run(components, sims, null_draws=a.null_draws)
     report["structure_expression_orthogonality"] = engine.structure_expression_orthogonality(report)

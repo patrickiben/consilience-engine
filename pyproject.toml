@@ -7,7 +7,7 @@ name = "consilience-engine"
 version = "1.0.0"
 description = "Keyless, domain-agnostic multi-lens consilience engine: which data modality reveals which class of biological entity."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Patrick Iben" }]
 keywords = ["bioinformatics", "data integration", "consilience", "gene sets", "multi-omics"]
@@ -15,6 +15,7 @@ dependencies = ["numpy", "scipy", "scikit-learn", "networkx"]
 
 [project.optional-dependencies]
 test = ["pytest", "hypothesis", "sympy"]
+figures = ["matplotlib"]
 
 [project.urls]
 Homepage = "https://github.com/patrickiben/consilience-engine"

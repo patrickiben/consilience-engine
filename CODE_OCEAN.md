@@ -2,7 +2,7 @@
 
 A Code Ocean compute capsule can accompany the source. This repository is
 capsule-ready: it ships a `Dockerfile` (the environment) and a single `run` entrypoint that
-reproduces every headline offline, with no network access, from the shipped caches
+reproduces the example reports and class-recovery multiverse offline, with no network access, from the shipped caches
 (`examples/.consilience_cache/`) and the shipped robustness inputs (`robustness/data/`).
 
 ## What `run` does (identical to the CI matrix)
@@ -31,3 +31,5 @@ reproduces every headline offline, with no network access, from the shipped cach
    identifiers. Publishing and the DOI are account-side steps for the author.
 
 Nothing here requires network access at run time, so the capsule is fully self-contained.
+The full manuscript figures and literature-discovery benchmark need additional inputs from the
+[OSF deposit](https://doi.org/10.17605/OSF.IO/ZKTRJ); they are outside this entrypoint's scope.

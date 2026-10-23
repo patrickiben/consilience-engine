@@ -4,7 +4,7 @@
 # The default command needs no network: the engine reproduces from shipped caches
 # (examples/.consilience_cache/) and the method-invariance check from shipped inputs
 # (robustness/data/).
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /consilience
 

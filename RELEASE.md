@@ -8,4 +8,7 @@ The `consilience-engine` package is public on GitHub with release v1.0.0. The so
 3. The repository is enabled on Zenodo (Settings -> GitHub), so each GitHub release is auto-archived and issued a DOI (`.zenodo.json` supplies the metadata); the current release DOI is 10.5281/zenodo.21399794.
 
 ## Reproducing
-See `README.md` (one-command offline reproduction) and `CODE_OCEAN.md` (Docker / Code Ocean capsule). All headline numbers reproduce offline from the shipped caches with no network access.
+See `README.md` (one-command offline reproduction) and `CODE_OCEAN.md` (Docker / Code Ocean capsule).
+The example-domain reports and class-recovery multiverse reproduce offline from shipped caches.
+Full manuscript figure inputs and the literature-discovery benchmark are in the OSF companion deposit;
+see `figures/README.md`. Live API results can differ from the deposited snapshots.
