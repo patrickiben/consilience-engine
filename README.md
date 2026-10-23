@@ -9,6 +9,17 @@ components (gene groups); it pulls several public data modalities: **structure**
 a gene–gene similarity graph per modality, and quantifies *which data modality is required to recognise each
 component*.
 
+## Corresponding manuscript
+
+**Which data modality recognizes a gene set? A domain-agnostic consilience engine.**
+Patrick Iben. [Author manuscript draft (PDF)](manuscript/consilience_PeerJ_draft.pdf),
+13 July 2026; under review at *PeerJ*.
+[Version and copyright](manuscript/README.md) ·
+[Manuscript → code → demo map](https://github.com/patrickiben/patrickiben/blob/main/RESEARCH_MAP.md).
+The [Zenodo DOI](https://doi.org/10.5281/zenodo.21399794) identifies the **software archive**;
+the manuscript PDF has no assigned preprint DOI. The PDF retains the author's copyright and is
+excluded from the code's MIT license.
+
 ## The principle it operationalises
 
 Across the nervous and immune systems, biological entity-classes have **distinct specialized diagnostic lenses**:
