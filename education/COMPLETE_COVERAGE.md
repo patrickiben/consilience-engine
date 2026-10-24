@@ -1,8 +1,8 @@
 # Complete-companion coverage map
 
-Basis: *Which data modality recognizes a gene set? A domain-agnostic consilience engine*, 13 July 2026 author draft, nineteen-page PDF, SHA-256 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885. Unit IDs refer to [the complete companion](COMPANION.md). The [concise guide](STUDY_GUIDE.md) is separately preserved.
+Basis: *Which data modality recognizes a gene set? A domain-agnostic consilience engine*, 13 July 2026 author draft, nineteen-page PDF, SHA-256 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885. Unit IDs refer to [the complete companion](COMPANION.md). The [concise guide](STUDY_GUIDE.md) provides a shorter route.
 
-This map covers every substantive source section, all eight figures and the unnumbered mathematical definitions. The draft has no separately numbered tables or equations. Figure panels are treated below; bibliographic and administrative material has explicit treatment. This is an accountable teaching-coverage map, not formal certification of a G9 inventory, signed G12 source freeze, exhaustive nonblank-line G14 accounting or human learning validation. Unprinted code details and deposited analyses are not invented.
+This map covers every substantive source section, all eight figures and the unnumbered mathematical definitions. The draft has no separately numbered tables or equations. Figure panels, bibliographic material and administrative statements are identified below. Unprinted code details and deposited analyses are not inferred from the prose.
 
 | Source passage / object | PDF pages | Complete units | Treatment |
 |---|---:|---|---|
@@ -59,7 +59,7 @@ This map covers every substantive source section, all eight figures and the unnu
 | One-off connectome and LBD analyses | 16 | C23, C39 | Shared primitives do not mean packaged CLI features |
 | Data availability / CC-BY outputs / primary-source families | 16 | C04, C06–C09, C18–C19, C22, C39 | Exact archive object and data/code distinction |
 | Interests, funding, contributions, ethics | 16 | C40 | Attributed administrative statements |
-| AI tools, programmatic figures, responsibility, acknowledgements | 16 | C40 | Source disclosures versus this companion's checks |
+| AI tools, programmatic figures, responsibility, acknowledgements | 16 | C40 | Source disclosures and author responsibility |
 | Full bibliography, including final Zhou reference | 17–19 | C02, C06–C09, C17–C22, C40 | Context/data/method roles; source retains full entries |
 | Figure1 engine | 5 | C10–C12, C23 | All stages from components to graphs to null-tested lens |
 | Figure2a lens profiles;2b scatterplot | 6–7 | C24–C28 | Classes, examples, exceptions, dual group and weak correlation |
@@ -70,4 +70,4 @@ This map covers every substantive source section, all eight figures and the unnu
 | Figure7a LOO;7b correlation specifications | 8 | C28–C29 | Direction robustness versus magnitude/design uncertainty |
 | Figure8 p-value calibration | 8 | C13–C15 | False alarms, MCSE and no power claim |
 
-The glossary defines recurring terminology. The separate twelve-item assessment covers core understanding, boundaries and transfer, with an answer key. Hypothetical examples are labeled; no empirical data or manuscript text was changed. Source-only verification receipts and derivative-render receipts have separate scopes. Human learning and accessibility reviews remain uncompleted; no full G14 pass is asserted.
+The glossary defines recurring terminology. The separate twelve-item assessment covers core understanding, boundaries and transfer, with an answer key. Hypothetical examples are labeled; numerical results belong to the exact source draft.

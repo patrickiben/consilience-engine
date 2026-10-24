@@ -2,7 +2,7 @@
 
 ## How to use this document
 
-This companion follows Patrick Iben's *Which data modality recognizes a gene set? A domain-agnostic consilience engine*, author draft dated 13 July 2026. It is for a numerate reader new to gene-set analysis. Work through its forty developed units in order, then use the glossary and answered transfer test. The preserved [concise study guide](STUDY_GUIDE.md) provides the shorter route.
+This companion follows Patrick Iben's *Which data modality recognizes a gene set? A domain-agnostic consilience engine*, author draft dated 13 July 2026. It is for a numerate reader new to gene-set analysis. Work through its forty developed units in order, then use the glossary and answered transfer test. The [concise study guide](STUDY_GUIDE.md) provides the shorter route.
 
 The exact [source PDF](../manuscript/consilience_PeerJ_draft.pdf) has SHA-256 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885. All page references refer to its nineteen pages. [Complete coverage](COMPLETE_COVERAGE.md) maps the source's methods, results, eight figures, limitations, declarations and reference roles. The source has unnumbered mathematical formulas rather than separately numbered equations or tables.
 
@@ -16,7 +16,7 @@ The question is which kind of data makes a named gene group distinctive. It is n
 - Literature co-occurrence is not experimental confirmation. High ROC-AUC does not imply a useful top-of-list precision.
 - Known biological and network properties are supporting validation, not automatically new discoveries. Configuration reuse does not guarantee success for every domain.
 
-Evidence labels distinguish **DEFINITION**, **ANALYTIC**, **MODELED_LOCKED** (specified resampling or modeling), **MEASURED_DATED** (analysis of public observations), **INTERPRETIVE** and **SCOPE**. They describe evidence roles, not a claim that every biological result is experimentally causal. Source checks are AI-assisted; full G14, human learning evaluation and independent full scientific reproduction are not certified.
+Evidence labels distinguish **DEFINITION**, **ANALYTIC**, **MODELED_LOCKED** (specified resampling or modeling), **MEASURED_DATED** (analysis of public observations), **INTERPRETIVE** and **SCOPE**. They describe evidence roles, not a claim that every biological result is experimentally causal.
 
 ## The question, the atlas and the four lenses
 
@@ -742,7 +742,7 @@ The bibliography supplies integration context, public-resource provenance, clust
 
 **In ordinary language:** The conclusion should stay as careful as the results. The tool helps compare evidence; it does not prove every biological story. Declarations say who is responsible and what help was used. References show where methods and inputs came from. None replaces checking the actual analysis.
 
-**Evidence status:** SCOPE for declarations and provenance; INTERPRETIVE synthesis. No human educational signoff or full validation is implied by the source's own approval statements.
+**Evidence status:** SCOPE for declarations and provenance; INTERPRETIVE synthesis. The source's approval statements are declarations, not independent scientific validation.
 
 **Do not accidentally conclude:** All familiar facts recovered are new discoveries, all domains are validated equally, or the manuscript's AI-assisted checks certify this companion's learning effectiveness.
 
@@ -832,12 +832,10 @@ Answer first, then consult the key. Four questions address core understanding, f
 11. Agreement is partly dependent evidence. It may reflect real coherence and shared knowledge; do not count every source as an independent experiment.
 12. State and harmonize retention/density where appropriate, inspect connectivity, node counts, edge semantics and measurement scale, and retain fragmentation caveats. Similar Q alone is insufficient.
 
-For a one-sentence teach-back, state the diagnostic question, its random-group evidence, one main nonclaim and one coverage check for a new domain. Human clarity and transfer scores remain unrecorded.
+For a one-sentence teach-back, state the diagnostic question, its random-group evidence, one main nonclaim and one coverage check for a new domain.
 
-## Preparation and exact-source record
+## Exact source
 
-The source draft remains unchanged. Its SHA-256 is 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885. Numerical biological and benchmark findings are attributed to that exact PDF. The annotation-set arithmetic in C06 and mean-subtraction example in C10 are explicitly hypothetical; their answers follow elementary set counting and subtraction, not new data. Other worked reasoning explains definitions or source results.
+The source draft SHA-256 is 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885. Numerical biological and benchmark findings are attributed to that exact PDF. The annotation-set arithmetic in C06 and mean-subtraction example in C10 are explicitly hypothetical; their answers follow elementary set counting and subtraction, not new data. Other worked reasoning explains definitions or source results.
 
 The source's displayed Figure 4/prose modality-count discrepancy is recorded without rewriting the paper. Unprinted implementation details are left to the deposited/maintained code rather than invented. Current installation instructions belong to the repository README; this companion is an explanation of the July manuscript, not an updated scientific analysis.
-
-The earlier concise guide is preserved separately as STUDY_GUIDE. No matching older gene-set educational companion was found in the examined candidates. This complete source-locked teaching document was prepared using AI-assisted source/figure comparisons and structural/numerical checks. No full empirical rerun, complete formal G14 pass, human audience/accessibility signoff or administered transfer-test result is claimed. Release-time PDF rendering and derivative checks are recorded separately.

@@ -385,7 +385,7 @@ A gene group has interaction separation but no expression separation. What is a 
 
 ## Twelve questions to test transfer
 
-Answer before consulting the key. No human learning assessment is claimed to have been administered.
+Answer before consulting the key.
 
 ### Core questions
 
@@ -425,14 +425,12 @@ Answer before consulting the key. No human learning assessment is claimed to hav
 
 ### One-sentence teach-back
 
-State the lens-map question, its permutation-tested evidence, its main interpretation limit and one check needed before transferring it to a new gene set. A human reader's clarity and transfer scores remain unrecorded.
+State the lens-map question, its permutation-tested evidence, its main interpretation limit and one check needed before transferring it to a new gene set.
 
-## Source and preparation record
+## Exact source
 
 This companion follows the exact supplied PeerJ author-draft PDF. Its SHA-256 is:
 
 3c03a781e459efc32025cfaae4922e45142cc16ffa0cd943ce190831dfc00885
 
 The source's pages 17–19 contain the bibliography for its methods and public resources. The hypothetical Jaccard and separation calculations above are teaching examples, not additional measurements. All reported biological and benchmark numbers are attributed to the selected draft.
-
-No matching gene-set educational companion was identified in the examined consilience, deposit, Math_Consilience or learning-bundle candidates. This text was prepared from the paper. AI-assisted source, figure and numerical checks were performed. Human audience, accessibility and transfer-test reviews have not been completed. No full G14 pass or full manuscript validation is claimed.
