@@ -20,8 +20,8 @@ The [Zenodo DOI](https://doi.org/10.5281/zenodo.21399794) identifies the **softw
 the manuscript PDF has no assigned preprint DOI. The PDF retains the author's copyright and is
 excluded from the code's MIT license.
 
-[Plain-language educational companion](education/README.md): definitions, worked examples,
-source-linked lessons, and exercises with answers for this manuscript draft.
+[Concise study guide and complete reading companion](education/README.md): source-linked
+explanations, worked examples, and answered exercises for this manuscript draft.
 
 ## The principle it operationalises
 
